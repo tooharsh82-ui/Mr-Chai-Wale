@@ -44,12 +44,14 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+#gallery,
+#bulk,
 #reviews,
 #find-us,
 #faq,
 footer {
   content-visibility: auto;
-  contain-intrinsic-size: 1px 350px;
+  contain-intrinsic-size: 1px 500px;
 }
 
 @media (prefers-reduced-motion: reduce) {

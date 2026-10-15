@@ -16,8 +16,8 @@ export const GallerySection: React.FC = () => {
     : Array.from({ length: 4 }).map((_, i) => ({
         src: '',
         alt: `Mr Chai Wale cart photo ${i + 1}`,
-        width: 1200,
-        height: 900,
+        width: 800,
+        height: 600,
       }));
 
   const video = cartConfig.video || { src: '', poster: '' };
@@ -89,10 +89,10 @@ export const GallerySection: React.FC = () => {
                     <OptimizedImage
                       src={item.src}
                       alt={item.alt || `Cart photo ${index + 1}`}
-                      width={item.width || 1200}
-                      height={item.height || 900}
+                      width={item.width || 800}
+                      height={item.height || 600}
                       aspectRatioClass="aspect-[4/3]"
-                      priority={index < 2}
+                      priority={false}
                       imgClassName="transition-transform duration-300 group-hover:scale-105"
                       fallback={placeholderFallback}
                     />
@@ -107,10 +107,10 @@ export const GallerySection: React.FC = () => {
                   <OptimizedImage
                     src={item.src}
                     alt={item.alt || `Cart photo ${index + 1}`}
-                    width={item.width || 1200}
-                    height={item.height || 900}
+                    width={item.width || 800}
+                    height={item.height || 600}
                     aspectRatioClass="aspect-[4/3]"
-                    priority={index < 2}
+                    priority={false}
                     fallback={placeholderFallback}
                   />
                 )}

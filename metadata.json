@@ -1,0 +1,6 @@
+{
+  "name": "Mr Chai Wale - Street Chai & Snacks Cart",
+  "description": "Authentic street chai and snacks cart. Order ahead for quick pickup on WhatsApp, check live open timings, menu, and location.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

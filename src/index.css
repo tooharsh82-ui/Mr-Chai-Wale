@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-leaf: #8FD9A1;
+  --color-leaf-soft: #F1FBF3;
+  --color-leaf-tint: #DDF3E2;
+  --color-leaf-ink: #166534;
+  --color-lemon: #FFE55C;
+  --color-lemon-dark: #F5D523;
+  --color-on-lemon: #14532D;
+  --color-ink: #1e293b;
+  --color-body: #475569;
+
+  --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-leaf-ink);
+  outline-offset: 2px;
+}
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(16px);
+  transition-property: opacity, transform;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#reviews,
+#find-us,
+#faq,
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 350px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
